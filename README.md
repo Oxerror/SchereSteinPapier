@@ -1,2 +1,2 @@
 # SchereSteinPapier
-Schere Stein Papier Spiel
+"Schere, Stein und Papier" Spiel
