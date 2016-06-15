@@ -33,11 +33,14 @@ namespace SchereSteinPapier
                 return;
             }
 
-            for (int i = 1; i <= 2; i++)
-            {
-                string Selected = IsSelected(i);
-                ShowSelections(Selected, i);
-            }
+  //          foreach(RadioButton rb in )
+
+
+//            for (int i = 1; i <= 2; i++)
+//            {
+//                string Selected = IsSelected(i);
+//                ShowSelections(Selected, i);
+//            }
 
             if(true == rbPaper1.IsChecked)
             {
@@ -121,11 +124,11 @@ namespace SchereSteinPapier
             return AreConfirmed;
         }
 
-        private string IsSelected(int Player)
-        {
-            return Selected;
-        }
-
+ //       private string IsSelected(int Player)
+ //       {
+ //           return Selected;
+ //       }
+ //
         private void ShowSelections(string Selection, int Player)
         {
 
