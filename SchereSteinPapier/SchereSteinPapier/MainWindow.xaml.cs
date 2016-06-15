@@ -25,7 +25,7 @@ namespace SchereSteinPapier
             InitializeComponent();
         }
 
-        private void scissors_ImageFailed(object sender, ExceptionRoutedEventArgs e)
+        private void btnConfirm1_Click(object sender, RoutedEventArgs e)
         {
 
         }
