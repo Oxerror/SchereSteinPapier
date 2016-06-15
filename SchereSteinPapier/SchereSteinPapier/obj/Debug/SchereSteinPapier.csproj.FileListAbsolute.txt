@@ -1,0 +1,14 @@
+c:\users\ch1011229\documents\visual studio 2015\Projects\SchereSteinPapier\SchereSteinPapier\bin\Debug\SchereSteinPapier.exe.config
+C:\Users\ch1011229\documents\visual studio 2015\Projects\SchereSteinPapier\SchereSteinPapier\bin\Debug\SchereSteinPapier.exe
+C:\Users\ch1011229\documents\visual studio 2015\Projects\SchereSteinPapier\SchereSteinPapier\bin\Debug\SchereSteinPapier.pdb
+C:\Users\ch1011229\documents\visual studio 2015\Projects\SchereSteinPapier\SchereSteinPapier\obj\Debug\SchereSteinPapier.csprojResolveAssemblyReference.cache
+C:\Users\ch1011229\documents\visual studio 2015\Projects\SchereSteinPapier\SchereSteinPapier\obj\Debug\MainWindow.g.cs
+C:\Users\ch1011229\documents\visual studio 2015\Projects\SchereSteinPapier\SchereSteinPapier\obj\Debug\App.g.cs
+C:\Users\ch1011229\documents\visual studio 2015\Projects\SchereSteinPapier\SchereSteinPapier\obj\Debug\SchereSteinPapier_MarkupCompile.cache
+C:\Users\ch1011229\documents\visual studio 2015\Projects\SchereSteinPapier\SchereSteinPapier\obj\Debug\SchereSteinPapier_MarkupCompile.lref
+C:\Users\ch1011229\documents\visual studio 2015\Projects\SchereSteinPapier\SchereSteinPapier\obj\Debug\MainWindow.baml
+C:\Users\ch1011229\documents\visual studio 2015\Projects\SchereSteinPapier\SchereSteinPapier\obj\Debug\SchereSteinPapier.g.resources
+C:\Users\ch1011229\documents\visual studio 2015\Projects\SchereSteinPapier\SchereSteinPapier\obj\Debug\SchereSteinPapier.Properties.Resources.resources
+C:\Users\ch1011229\documents\visual studio 2015\Projects\SchereSteinPapier\SchereSteinPapier\obj\Debug\SchereSteinPapier.csproj.GenerateResource.Cache
+C:\Users\ch1011229\documents\visual studio 2015\Projects\SchereSteinPapier\SchereSteinPapier\obj\Debug\SchereSteinPapier.exe
+C:\Users\ch1011229\documents\visual studio 2015\Projects\SchereSteinPapier\SchereSteinPapier\obj\Debug\SchereSteinPapier.pdb

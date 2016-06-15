@@ -1,0 +1,20 @@
+﻿<Window x:Class="SchereSteinPapier.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchereSteinPapier"
+        mc:Ignorable="d"
+        Title="Schere Stein Papier" Height="363.805" Width="525">
+    <Grid>
+        <UniformGrid Margin="10,30,338,24">
+            <Image x:Name="scissors" Source="./Images/scissors.jpg" HorizontalAlignment="Left" Height="61" Margin="0,0,-44,0" VerticalAlignment="Top" Width="100"/>
+            <Image x:Name="Stone" Source="./Images/Stone.jpg" HorizontalAlignment="Left" Height="100" Margin="-56,80,0,-87" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.599,1.573"/>
+            <Image x:Name="Paper" Source="./Images/Paper.jpg" HorizontalAlignment="Left" Height="100" Margin="-113,180,0,-187" VerticalAlignment="Top" Width="100"/>
+            <RadioButton x:Name="rbScissors1" Content="Scissors" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="112,-68,-113,0"/>
+            <RadioButton x:Name="rbStone1" Content="Stone" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="56,32,-47,0"/>
+            <RadioButton x:Name="rbPaper1" Content="Paper" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-1,132,0,-55"/>
+        </UniformGrid>
+
+    </Grid>
+</Window>
