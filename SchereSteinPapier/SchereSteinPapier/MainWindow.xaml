@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SchereSteinPapier"
         mc:Ignorable="d"
-        Title="Schere Stein Papier" Height="364" Width="525">
+        Title="Schere Stein Papier" Height="364" Width="525" ResizeMode="CanMinimize">
     <Grid>
-        <UniformGrid Margin="10,30,338,24">
-            <Image x:Name="scissors1" Source="./Images/scissors.jpg" HorizontalAlignment="Left" Height="61" Margin="0,0,-44,0" VerticalAlignment="Top" Width="100"/>
+        <UniformGrid Margin="10,30,338,24" Name="UGSelectionPlayer1">
+            <Image x:Name="Scissors1" Source="./Images/scissors.jpg" HorizontalAlignment="Left" Height="61" Margin="0,0,-44,0" VerticalAlignment="Top" Width="100"/>
             <Image x:Name="Stone1" Source="./Images/Stone.jpg" HorizontalAlignment="Left" Height="100" Margin="-56,80,0,-87" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.599,1.573"/>
             <Image x:Name="Paper1" Source="./Images/Paper.jpg" HorizontalAlignment="Left" Height="100" Margin="-113,180,0,-187" VerticalAlignment="Top" Width="100"/>
             <RadioButton x:Name="rbScissors1" Content="Scissors" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="109,-68,-130,0"/>
@@ -16,8 +16,10 @@
             <RadioButton x:Name="rbPaper1" Content="Paper" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-4,132,0,-55"/>
 
         </UniformGrid>
-        <UniformGrid Margin="340,30,10,24">
-            <Image x:Name="scissors2" Source="./Images/scissors.jpg" HorizontalAlignment="Left" Height="61" Margin="67,0,-111,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btnConfirm1" Content="Confirm selection Player 1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="151" Margin="173,249,0,0" Click="btnConfrim1_Click"/>
+
+        <UniformGrid Margin="340,30,10,24" Name="UGSelectionPlayer2">
+            <Image x:Name="Scissors2" Source="./Images/scissors.jpg" HorizontalAlignment="Left" Height="61" Margin="67,0,-111,0" VerticalAlignment="Top" Width="100"/>
             <Image x:Name="Stone2" Source="./Images/Stone.jpg" HorizontalAlignment="Left" Height="100" Margin="11,75,-55,-82" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.599,1.573"/>
             <Image x:Name="Paper2" Source="./Images/Paper.jpg" HorizontalAlignment="Left" Height="100" Margin="-45,180,0,-187" VerticalAlignment="Top" Width="100"/>
             <RadioButton x:Name="rbScissors2" Content="Scissors" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-68,-130,0"/>
@@ -25,11 +27,11 @@
             <RadioButton x:Name="rbPaper2" Content="Paper" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-112,132,0,-55"/>
 
         </UniformGrid>
+        <Button x:Name="btnConfrim2" Content="Confirm selection Player 2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="151" Margin="173,276,0,0" Click="btnConfrim2_Click"/>
+
         <Label x:Name="lblPlayer1" Content="Player 1" HorizontalAlignment="Left" Margin="55,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblPlayer2" Content="Player 2" HorizontalAlignment="Left" Margin="415,10,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnConfirm1" Content="Confirm selection Player 1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="151" Margin="184,249,0,0" Click="btnConfirm1_Click"/>
-        <Button x:Name="btnConfrim2" Content="Confirm selection Player 2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="151" Margin="184,276,0,0"/>
-        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="222,166,0,0"/>
+        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="211,166,0,0" Click="btnPlay_Click"/>
 
     </Grid>
 </Window>
