@@ -40,8 +40,8 @@ namespace SchereSteinPapier
             int Paper = 3;
 
 
-            Player1 = ShowSelections(rbPaper1, rbScissors1, rbStone1, Paper, Stone, Scissors);
-            Player2 = ShowSelections(rbPaper2, rbScissors2, rbStone2, Paper, Stone, Scissors);
+            Player1 = ShowSelections(rbPaper1, rbScissors1, rbStone1, Paper, Stone, Scissors, Stone1, Scissors1, Paper1);
+            Player2 = ShowSelections(rbPaper2, rbScissors2, rbStone2, Paper, Stone, Scissors, Stone2, Scissors2, Paper2);
 
             ShowResult(Player1, Player2, Scissors, Paper);
 
@@ -57,35 +57,43 @@ namespace SchereSteinPapier
             else if (Player2 == Scissors && Player1 == Paper)
             {
                 MessageBox.Show("Player 2 have won this Round");
+                AddPointTo(lblPlayer2WinsCount);
             }
             else if (Player1 > Player2 || (Player2 == Paper && Player1 == Scissors))
             {
                 MessageBox.Show("Player 1 have won this Round");
+                AddPointTo(lblPlayer1WinsCount);
             }
             else if (Player2 > Player1)
             {
                 MessageBox.Show("Player 2 have won this Round");
+                AddPointTo(lblPlayer2WinsCount);
             }
         }
 
-        private int ShowSelections(RadioButton rbPaper, RadioButton rbScissors, RadioButton rbStone, int Paper, int Stone, int Scissors)
+        private void AddPointTo(Label WinCount)
         {
-            if (true == rbPaper1.IsChecked)
+            WinCount.Content = (Convert.ToInt32(WinCount.Content) + 1).ToString();
+        }
+
+        private int ShowSelections(RadioButton rbPaper, RadioButton rbScissors, RadioButton rbStone, int Paper, int Stone, int Scissors, Image IStone, Image IScissors, Image IPaper)
+        {
+            if (true == rbPaper.IsChecked)
             {
-                Stone1.Visibility = Visibility.Hidden;
-                Scissors1.Visibility = Visibility.Hidden;
+                IStone.Visibility = Visibility.Hidden;
+                IScissors.Visibility = Visibility.Hidden;
                 return Paper;
             }
-            else if (true == rbStone1.IsChecked)
+            else if (true == rbStone.IsChecked)
             {
-                Paper1.Visibility = Visibility.Hidden;
-                Scissors1.Visibility = Visibility.Hidden;
+                IPaper.Visibility = Visibility.Hidden;
+                IScissors.Visibility = Visibility.Hidden;
                 return Stone;
             }
             else
             {
-                Paper1.Visibility = Visibility.Hidden;
-                Stone1.Visibility = Visibility.Hidden;
+                IPaper.Visibility = Visibility.Hidden;
+                IStone.Visibility = Visibility.Hidden;
                 return Scissors;
             }
         }
@@ -93,7 +101,7 @@ namespace SchereSteinPapier
         private void AllVisable()
         {
             btnConfirm1.IsEnabled = true;
-            btnConfrim2.IsEnabled = true;
+            btnConfirm2.IsEnabled = true;
             Paper1.Visibility = Visibility.Visible;
             Scissors1.Visibility = Visibility.Visible;
             Stone1.Visibility = Visibility.Visible;
@@ -108,37 +116,51 @@ namespace SchereSteinPapier
             rbScissors2.Visibility = Visibility.Visible;
         }
 
-        private void btnConfrim1_Click(object sender, RoutedEventArgs e)
+        private void btnConfrim_Click(object sender, RoutedEventArgs e)
         {
-            if(!(true == rbPaper1.IsChecked || true == rbScissors1.IsChecked || true == rbStone1.IsChecked))
+            if(!(sender is Button))
+            {
+                return;
+            }
+
+            var button = (Button)sender;
+            RadioButton rbPaper;
+            RadioButton rbScissors;
+            RadioButton rbStone;
+
+            if(button.Name == "btnConfirm1")
+            {
+                rbPaper = rbPaper1;
+                rbScissors = rbScissors1;
+                rbStone = rbStone1;
+            }
+            else if (button.Name == "btnConfirm2")
+            {
+                rbPaper = rbPaper2;
+                rbScissors = rbScissors2;
+                rbStone = rbStone2;
+            }
+            else
+            {
+                return;
+            }
+
+            if (!(true == rbPaper.IsChecked || true == rbScissors.IsChecked || true == rbStone.IsChecked))
             {
                 MessageBox.Show("You have to select a Value for Player 1");
                 return;
             }
-            rbPaper1.Visibility = Visibility.Hidden;
-            rbStone1.Visibility = Visibility.Hidden;
-            rbScissors1.Visibility = Visibility.Hidden;
-            btnConfirm1.IsEnabled = false;
-        }
-
-        private void btnConfrim2_Click(object sender, RoutedEventArgs e)
-        {
-            if (!(true == rbPaper2.IsChecked || true == rbScissors2.IsChecked || true == rbStone2.IsChecked))
-            {
-                MessageBox.Show("You have to select a Value for Player 2");
-                return;
-            }
-            rbPaper2.Visibility = Visibility.Hidden;
-            rbStone2.Visibility = Visibility.Hidden;
-            rbScissors2.Visibility = Visibility.Hidden;
-            btnConfrim2.IsEnabled = false;
+            rbPaper.Visibility = Visibility.Hidden;
+            rbStone.Visibility = Visibility.Hidden;
+            rbScissors.Visibility = Visibility.Hidden;
+            button.IsEnabled = false;
         }
 
         private bool SelectionsAreConfirmed()
         {
             bool AreConfirmed = false;
 
-            if(false == btnConfirm1.IsEnabled && false == btnConfrim2.IsEnabled)
+            if(false == btnConfirm1.IsEnabled && false == btnConfirm2.IsEnabled)
             {
                 AreConfirmed = true;
             }
