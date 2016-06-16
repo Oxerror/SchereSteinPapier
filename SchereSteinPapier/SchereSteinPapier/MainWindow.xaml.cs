@@ -33,53 +33,79 @@ namespace SchereSteinPapier
                 return;
             }
 
-  //          foreach(RadioButton rb in )
+            int Player1;
+            int Player2;
+            int Scissors = 1;
+            int Stone = 2;
+            int Paper = 3;
 
 
-//            for (int i = 1; i <= 2; i++)
-//            {
-//                string Selected = IsSelected(i);
-//                ShowSelections(Selected, i);
-//            }
+            Player1 = ShowSelections(rbPaper1, rbScissors1, rbStone1, Paper, Stone, Scissors);
+            Player2 = ShowSelections(rbPaper2, rbScissors2, rbStone2, Paper, Stone, Scissors);
 
-            if(true == rbPaper1.IsChecked)
+            ShowResult(Player1, Player2, Scissors, Paper);
+
+            AllVisable();
+        }
+
+        private void ShowResult(int Player1, int Player2, int Scissors, int Paper)
+        {
+            if (Player1 == Player2)
+            {
+                MessageBox.Show("Both Player have chosen the same");
+            }
+            else if (Player2 == Scissors && Player1 == Paper)
+            {
+                MessageBox.Show("Player 2 have won this Round");
+            }
+            else if (Player1 > Player2 || (Player2 == Paper && Player1 == Scissors))
+            {
+                MessageBox.Show("Player 1 have won this Round");
+            }
+            else if (Player2 > Player1)
+            {
+                MessageBox.Show("Player 2 have won this Round");
+            }
+        }
+
+        private int ShowSelections(RadioButton rbPaper, RadioButton rbScissors, RadioButton rbStone, int Paper, int Stone, int Scissors)
+        {
+            if (true == rbPaper1.IsChecked)
             {
                 Stone1.Visibility = Visibility.Hidden;
                 Scissors1.Visibility = Visibility.Hidden;
+                return Paper;
             }
             else if (true == rbStone1.IsChecked)
             {
                 Paper1.Visibility = Visibility.Hidden;
                 Scissors1.Visibility = Visibility.Hidden;
+                return Stone;
             }
             else
             {
                 Paper1.Visibility = Visibility.Hidden;
                 Stone1.Visibility = Visibility.Hidden;
+                return Scissors;
             }
+        }
 
-            if (true == rbPaper2.IsChecked)
-            {
-                Stone2.Visibility = Visibility.Hidden;
-                Scissors2.Visibility = Visibility.Hidden;
-            }
-            else if (true == rbStone2.IsChecked)
-            {
-                Paper2.Visibility = Visibility.Hidden;
-                Scissors2.Visibility = Visibility.Hidden;
-            }
-            else
-            {
-                Paper2.Visibility = Visibility.Hidden;
-                Stone2.Visibility = Visibility.Hidden;
-            }
-
-
-
-
-
+        private void AllVisable()
+        {
             btnConfirm1.IsEnabled = true;
-            btnConfrim2.IsEnabled = true;            
+            btnConfrim2.IsEnabled = true;
+            Paper1.Visibility = Visibility.Visible;
+            Scissors1.Visibility = Visibility.Visible;
+            Stone1.Visibility = Visibility.Visible;
+            Paper2.Visibility = Visibility.Visible;
+            Scissors2.Visibility = Visibility.Visible;
+            Stone2.Visibility = Visibility.Visible;
+            rbPaper1.Visibility = Visibility.Visible;
+            rbStone1.Visibility = Visibility.Visible;
+            rbScissors1.Visibility = Visibility.Visible;
+            rbPaper2.Visibility = Visibility.Visible;
+            rbStone2.Visibility = Visibility.Visible;
+            rbScissors2.Visibility = Visibility.Visible;
         }
 
         private void btnConfrim1_Click(object sender, RoutedEventArgs e)
@@ -122,16 +148,6 @@ namespace SchereSteinPapier
             }
 
             return AreConfirmed;
-        }
-
- //       private string IsSelected(int Player)
- //       {
- //           return Selected;
- //       }
- //
-        private void ShowSelections(string Selection, int Player)
-        {
-
         }
     }
 }
