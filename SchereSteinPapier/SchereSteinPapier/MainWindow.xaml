@@ -33,20 +33,20 @@
         <Image x:Name="Scissors1" Source="./Images/scissors.jpg" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="1"/>
         <Image x:Name="Stone1" Source="./Images/Stone.jpg" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="2"/>
         <Image x:Name="Paper1" Source="./Images/Paper.jpg" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"  Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
-        <RadioButton GroupName="P1" x:Name="rbScissors1" Content="Scissors" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,26,0,25" Grid.Column="3" Grid.Row="1"/>
-        <RadioButton GroupName="P1" x:Name="rbStone1" Content="Stone" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,25,0,26" Grid.Column="3" Grid.Row="2"/>
-        <RadioButton GroupName="P1" x:Name="rbPaper1" Content="Paper" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,2" Grid.Column="3" Grid.Row="4"/>
+        <RadioButton GroupName="P1" x:Name="rbScissors1" Content="Scissors" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,26,0,25" Grid.Column="3" Grid.Row="1" IsEnabled="False"/>
+        <RadioButton GroupName="P1" x:Name="rbStone1" Content="Stone" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,25,0,26" Grid.Column="3" Grid.Row="2" IsEnabled="False"/>
+        <RadioButton GroupName="P1" x:Name="rbPaper1" Content="Paper" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,2" Grid.Column="3" Grid.Row="4" IsEnabled="False"/>
 
-        <Button x:Name="btnConfirm1" Content="Confirm selection Player 1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Click="btnConfrim_Click" Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnConfirm1" Content="Confirm selection Player 1" IsEnabled="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Click="btnConfrim_Click" Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="2"/>
 
         <Image x:Name="Scissors2" Source="./Images/scissors.jpg" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Column="10" Grid.Row="1"/>
         <Image x:Name="Stone2" Source="./Images/Stone.jpg" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Column="10" Grid.Row="2"/>
         <Image x:Name="Paper2" Source="./Images/Paper.jpg" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Column="10" Grid.Row="3" Grid.RowSpan="3"/>
-        <RadioButton GroupName="P2" x:Name="rbScissors2" Content="Scissors" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,26,0,25" Grid.Column="8" Grid.Row="1"/>
-        <RadioButton GroupName="P2" x:Name="rbStone2" Content="Stone" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,25,0,26" Grid.Column="8" Grid.Row="2"/>
-        <RadioButton GroupName="P2" x:Name="rbPaper2" Content="Paper" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,2" Grid.Column="8" Grid.Row="4"/>
+        <RadioButton GroupName="P2" x:Name="rbScissors2" Content="Scissors" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,26,0,25" Grid.Column="8" Grid.Row="1" IsEnabled="False"/>
+        <RadioButton GroupName="P2" x:Name="rbStone2" Content="Stone" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,25,0,26" Grid.Column="8" Grid.Row="2" IsEnabled="False"/>
+        <RadioButton GroupName="P2" x:Name="rbPaper2" Content="Paper" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,2" Grid.Column="8" Grid.Row="4" IsEnabled="False"/>
 
-        <Button x:Name="btnConfirm2" Content="Confirm selection Player 2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Click="btnConfrim_Click" Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnConfirm2" Content="Confirm selection Player 2" IsEnabled="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Click="btnConfrim_Click" Grid.Column="5" Grid.Row="5" Grid.ColumnSpan="2"/>
 
         <Label x:Name="lblPlayer1" Content="Player 1" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Bottom" Grid.Column="1" Height="26" Width="52"/>
         <Label x:Name="lblPlayer2" Content="Player 2" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" Grid.Column="10" Grid.RowSpan="1" Height="26" Width="52"/>
@@ -57,6 +57,8 @@
         <Label x:Name="lblPlayer1WinsCount" Content="0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="6" Grid.Row="1"/>
         <Label x:Name="lblPlayer2WinsCount" Content="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Column="6" Grid.Row="1"/>
         <Label x:Name="lblBestOf" Content="Best of:" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="5" Grid.Row="0"/>
-        <Label x:Name="lblBestOfCount" Content="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Column="6" Grid.Row="0"/>
+        <TextBox x:Name="txtBestOfCount" HorizontalAlignment="Stretch" Height="23" TextWrapping="Wrap" Grid.Column="6" VerticalAlignment="Bottom" TabIndex="0" PreviewTextInput="OnTextInput"/>
+        <Border x:Name="BorderPlayer1" BorderBrush="Black" BorderThickness="3" Grid.Column="0" HorizontalAlignment="Stretch" Grid.Row="1" Grid.RowSpan="5" VerticalAlignment="Stretch" Grid.ColumnSpan="3" Visibility="Hidden"/>
+        <Border x:Name="BorderPlayer2" BorderBrush="Black" BorderThickness="3" Grid.Column="9" HorizontalAlignment="Stretch" Grid.Row="1" Grid.RowSpan="5" VerticalAlignment="Stretch" Grid.ColumnSpan="10" Visibility="Hidden"/>
     </Grid>
 </Window>
