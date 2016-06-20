@@ -197,7 +197,6 @@ namespace SchereSteinPapier
                 AddPointTo(lblPlayer2WinsCount);
                 return P2W;
             }
-            MessageBox.Show("Something went wrong\nPlease contact the Administrator of this game");
             return "";
         }
 
